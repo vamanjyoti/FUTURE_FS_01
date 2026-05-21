@@ -80,9 +80,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Vaman Jyoti — Portfolio" },
-      { link: "canonical", href: "/" } as any,
     ],
     links: [
+      { rel: "canonical", href: "/" },
       {
         rel: "stylesheet",
         href: appCss,
