@@ -322,10 +322,17 @@ export default function Portfolio() {
             {PROJECTS.map((p, i) => (
               <article
                 key={p.title}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 transition hover:-translate-y-1 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-500/10"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] transition hover:-translate-y-1 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-500/10"
               >
-                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-indigo-500/10 blur-3xl transition group-hover:bg-indigo-500/20" />
-                <div className="relative">
+                {/* thumbnail */}
+                <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${p.gradient}`}>
+                  <div className="absolute inset-0 grid-bg opacity-30" />
+                  <div className="absolute inset-0 flex items-center justify-center text-6xl drop-shadow-lg transition duration-500 group-hover:scale-110">
+                    {p.emoji}
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent" />
+                </div>
+                <div className="relative p-6">
                   <div className="mb-3 flex items-center justify-between">
                     <span className="text-xs font-mono text-indigo-300">
                       0{i + 1}
