@@ -242,7 +242,7 @@ export default function Portfolio() {
               <img
                 src={vamanPhoto}
                 alt="Vaman Jyoti"
-                className="absolute inset-[12px] h-[calc(100%-24px)] w-[calc(100%-24px)] rounded-full object-cover object-[center_20%] shadow-2xl shadow-indigo-500/30"
+                className="absolute inset-[12px] h-[calc(100%-24px)] w-[calc(100%-24px)] rounded-full object-cover object-[center_10%] shadow-2xl shadow-indigo-500/30"
               />
               {/* orbiting dots */}
               <div className="pointer-events-none absolute inset-0">
