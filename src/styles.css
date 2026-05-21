@@ -191,3 +191,18 @@
 .animate-glow { animation: pulse-glow 3s ease-in-out infinite; }
 
 html { scroll-behavior: smooth; }
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 12s linear infinite; }
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(var(--r, 120px)) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(var(--r, 120px)) rotate(-360deg); }
+}
+.animate-orbit { animation: orbit 14s linear infinite; }
+
+.conic-ring {
+  background: conic-gradient(from 0deg, #818cf8, #22d3ee, #a78bfa, #818cf8);
+}

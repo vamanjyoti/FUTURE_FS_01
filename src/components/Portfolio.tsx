@@ -1,4 +1,5 @@
 import { useState } from "react";
+import vamanPhoto from "@/assets/vaman.jpg";
 import {
   Github,
   Linkedin,
@@ -54,31 +55,43 @@ const PROJECTS = [
     title: "Personal Portfolio Website",
     desc: "Responsive personal portfolio website built with HTML and CSS, focused on clean typography and layout.",
     tags: ["HTML", "CSS", "Responsive"],
+    gradient: "from-indigo-500 via-violet-500 to-fuchsia-500",
+    emoji: "🪐",
   },
   {
     title: "Photographer Website",
     desc: "Modern responsive photographer website featuring a sidebar layout and grid-based gallery.",
     tags: ["HTML", "CSS", "UI"],
+    gradient: "from-cyan-400 via-sky-500 to-indigo-500",
+    emoji: "📷",
   },
   {
     title: "Spotify Clone",
     desc: "Spotify-inspired responsive music interface built with Flexbox, recreating core layout patterns.",
     tags: ["HTML", "CSS", "Flexbox"],
+    gradient: "from-emerald-400 via-teal-500 to-cyan-500",
+    emoji: "🎵",
   },
   {
     title: "Campus Chronicle",
     desc: "Web-based system for managing college events digitally — schedules, announcements, and registrations.",
     tags: ["Web App", "Database"],
+    gradient: "from-amber-400 via-orange-500 to-rose-500",
+    emoji: "🎓",
   },
   {
     title: "RescueAI",
     desc: "AI-powered disaster response system combining AI agents, data analytics, and quantum computing concepts.",
     tags: ["AI", "Analytics", "Quantum"],
+    gradient: "from-rose-500 via-pink-500 to-violet-500",
+    emoji: "🛟",
   },
   {
     title: "StackCipher — AI Career Guidance",
     desc: "Full-stack web app delivering personalized career guidance based on user interests and skills, with planned AI chatbot integration.",
     tags: ["Full Stack", "AI", "JavaScript"],
+    gradient: "from-violet-500 via-indigo-500 to-cyan-400",
+    emoji: "🧭",
   },
 ];
 
@@ -173,23 +186,24 @@ export default function Portfolio() {
 
       <main className="mx-auto max-w-6xl px-6">
         {/* Hero */}
-        <section id="home" className="flex min-h-[88vh] flex-col items-center justify-center py-20 text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-muted-foreground backdrop-blur">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-            Available for internships & collaborations
-          </div>
-          <h1 className="text-balance text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
-            Hi, I'm <span className="glow-text">Vaman Jyoti</span>
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
-            BCA Student · Web Developer · AI Enthusiast
-          </p>
-          <p className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground/90 sm:text-lg">
-            Passionate BCA student with skills in web development, database management, and
-            Generative AI. I love building responsive websites and exploring future technology
-            solutions.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <section id="home" className="grid min-h-[88vh] grid-cols-1 items-center gap-12 py-20 md:grid-cols-[1.1fr_1fr]">
+          <div className="order-2 text-center md:order-1 md:text-left">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-muted-foreground backdrop-blur">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+              Available for internships & collaborations
+            </div>
+            <h1 className="text-balance text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
+              Hi, I'm <span className="glow-text">Vaman Jyoti</span>
+            </h1>
+            <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
+              BCA Student · Web Developer · AI Enthusiast
+            </p>
+            <p className="mt-6 max-w-2xl text-balance text-base text-muted-foreground/90 sm:text-lg">
+              Passionate BCA student with skills in web development, database management, and
+              Generative AI. I love building responsive websites and exploring future technology
+              solutions.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <a
               href="#projects"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-indigo-500/30 transition hover:shadow-indigo-500/50"
@@ -204,8 +218,8 @@ export default function Portfolio() {
             >
               <Download className="h-4 w-4" /> Download Resume
             </a>
-          </div>
-          <div className="mt-10 flex items-center gap-5 text-muted-foreground">
+            </div>
+            <div className="mt-10 flex items-center justify-center gap-5 text-muted-foreground md:justify-start">
             <a href="https://github.com/vamanjyoti" target="_blank" rel="noreferrer" aria-label="GitHub" className="transition hover:text-foreground">
               <Github />
             </a>
@@ -215,6 +229,35 @@ export default function Portfolio() {
             <a href="mailto:vamanjyoti07@gmail.com" aria-label="Email" className="transition hover:text-foreground">
               <Mail />
             </a>
+            </div>
+          </div>
+
+          {/* Photo with orbit + conic ring */}
+          <div className="order-1 flex items-center justify-center md:order-2">
+            <div className="relative h-[280px] w-[280px] sm:h-[340px] sm:w-[340px] md:h-[420px] md:w-[420px]">
+              {/* conic glow ring */}
+              <div className="absolute inset-0 rounded-full conic-ring animate-spin-slow opacity-70 blur-[2px]" />
+              <div className="absolute inset-[6px] rounded-full bg-background" />
+              {/* photo */}
+              <img
+                src={vamanPhoto}
+                alt="Vaman Jyoti"
+                className="absolute inset-[12px] h-[calc(100%-24px)] w-[calc(100%-24px)] rounded-full object-cover shadow-2xl shadow-indigo-500/30"
+              />
+              {/* orbiting dots */}
+              <div className="pointer-events-none absolute inset-0">
+                <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400 shadow-[0_0_20px_#22d3ee] animate-orbit" style={{ ['--r' as any]: '160px' }} />
+                <div className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400 shadow-[0_0_18px_#a78bfa] animate-orbit" style={{ ['--r' as any]: '190px', animationDuration: '18s', animationDirection: 'reverse' }} />
+                <div className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-300 shadow-[0_0_16px_#818cf8] animate-orbit" style={{ ['--r' as any]: '210px', animationDuration: '22s' }} />
+              </div>
+              {/* floating chips */}
+              <div className="glass absolute -left-2 top-10 hidden rounded-xl px-3 py-2 text-xs animate-float sm:block">
+                <span className="text-indigo-300">{`</>`}</span> React · AI
+              </div>
+              <div className="glass absolute -right-2 bottom-12 hidden rounded-xl px-3 py-2 text-xs animate-float sm:block" style={{ animationDelay: '1.5s' }}>
+                🚀 Building the future
+              </div>
+            </div>
           </div>
         </section>
 
@@ -279,10 +322,17 @@ export default function Portfolio() {
             {PROJECTS.map((p, i) => (
               <article
                 key={p.title}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 transition hover:-translate-y-1 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-500/10"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] transition hover:-translate-y-1 hover:border-indigo-400/40 hover:shadow-2xl hover:shadow-indigo-500/10"
               >
-                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-indigo-500/10 blur-3xl transition group-hover:bg-indigo-500/20" />
-                <div className="relative">
+                {/* thumbnail */}
+                <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${p.gradient}`}>
+                  <div className="absolute inset-0 grid-bg opacity-30" />
+                  <div className="absolute inset-0 flex items-center justify-center text-6xl drop-shadow-lg transition duration-500 group-hover:scale-110">
+                    {p.emoji}
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent" />
+                </div>
+                <div className="relative p-6">
                   <div className="mb-3 flex items-center justify-between">
                     <span className="text-xs font-mono text-indigo-300">
                       0{i + 1}
