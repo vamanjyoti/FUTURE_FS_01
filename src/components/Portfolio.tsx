@@ -55,31 +55,43 @@ const PROJECTS = [
     title: "Personal Portfolio Website",
     desc: "Responsive personal portfolio website built with HTML and CSS, focused on clean typography and layout.",
     tags: ["HTML", "CSS", "Responsive"],
+    gradient: "from-indigo-500 via-violet-500 to-fuchsia-500",
+    emoji: "🪐",
   },
   {
     title: "Photographer Website",
     desc: "Modern responsive photographer website featuring a sidebar layout and grid-based gallery.",
     tags: ["HTML", "CSS", "UI"],
+    gradient: "from-cyan-400 via-sky-500 to-indigo-500",
+    emoji: "📷",
   },
   {
     title: "Spotify Clone",
     desc: "Spotify-inspired responsive music interface built with Flexbox, recreating core layout patterns.",
     tags: ["HTML", "CSS", "Flexbox"],
+    gradient: "from-emerald-400 via-teal-500 to-cyan-500",
+    emoji: "🎵",
   },
   {
     title: "Campus Chronicle",
     desc: "Web-based system for managing college events digitally — schedules, announcements, and registrations.",
     tags: ["Web App", "Database"],
+    gradient: "from-amber-400 via-orange-500 to-rose-500",
+    emoji: "🎓",
   },
   {
     title: "RescueAI",
     desc: "AI-powered disaster response system combining AI agents, data analytics, and quantum computing concepts.",
     tags: ["AI", "Analytics", "Quantum"],
+    gradient: "from-rose-500 via-pink-500 to-violet-500",
+    emoji: "🛟",
   },
   {
     title: "StackCipher — AI Career Guidance",
     desc: "Full-stack web app delivering personalized career guidance based on user interests and skills, with planned AI chatbot integration.",
     tags: ["Full Stack", "AI", "JavaScript"],
+    gradient: "from-violet-500 via-indigo-500 to-cyan-400",
+    emoji: "🧭",
   },
 ];
 
