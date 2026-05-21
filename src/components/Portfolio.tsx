@@ -1,4 +1,5 @@
 import { useState } from "react";
+import vamanPhoto from "@/assets/vaman.jpg";
 import {
   Github,
   Linkedin,
