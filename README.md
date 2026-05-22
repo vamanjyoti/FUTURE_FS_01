@@ -6,11 +6,7 @@ A modern, responsive personal portfolio website built with **React 19**, **TanSt
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06B6D4?logo=tailwindcss)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript)
 
-## 🔗 Live Demo
 
-View the live site at: [your-published-url.lovable.app](https://your-published-url.lovable.app)
-
-## ✨ Features
 
 - **Responsive Design** — Looks great on mobile, tablet, and desktop
 - **Dark Futuristic Theme** — Midnight indigo palette with neon accents
@@ -193,6 +189,4 @@ All colors use `oklch()` for perceptually uniform color spaces.
 - **LinkedIn**: [linkedin.com/in/vamanjyoti](https://www.linkedin.com/in/vamanjyoti)
 - **GitHub**: [github.com/vamanjyoti](https://github.com/vamanjyoti)
 
----
 
-Built with ❤️ using [Lovable](https://lovable.dev)
