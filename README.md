@@ -7,7 +7,7 @@ A modern, responsive personal portfolio website built with **React 19**, **TanSt
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript)
 
 ## 🔗 Live Demo
-View the live site at: [your-published-url.lovable.app](https://your-published-url.lovable.app)
+View the live site at: https://lovable.dev/projects/dedcc88b-45c6-4c9f-8fd4-3b42a2178454
 
 
 ## ✨ Features
